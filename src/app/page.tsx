@@ -10,7 +10,7 @@ export default function Home() {
         width: "7xl",
       })}
     >
-      <h2 className={css({ fontSize: "3xl" })}>見出しです</h2>
+      <h2 className={css({ fontSize: "3xl", color: "primary" })}>見出しです</h2>
     </main>
   );
 }
