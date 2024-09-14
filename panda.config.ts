@@ -17,9 +17,19 @@ export default defineConfig({
         colors: {
           primary: { value: "#0FEE0F" },
           secondary: { value: "#EE0F0F" },
+          red: {
+            value: "#FF0000",
+            hoge: { value: "#00ff00" },
+            fuga: { value: "#dd0000" },
+          },
         },
         fonts: {
           body: { value: "system-ui, sans-serif" },
+        },
+        spacing: {
+          s: { value: "8px" },
+          m: { value: "16px" },
+          l: { value: "24px" },
         },
       },
     },
