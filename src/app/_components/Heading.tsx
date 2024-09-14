@@ -1,6 +1,8 @@
 import { css, cva, RecipeVariantProps } from "../../../styled-system/css";
 // import { RESULT } from "./const";
-// computed valueはno-dynamic-stylingのルールで引っかかる
+// 同一ファイルの場合はpanda cssで期待通りに動くが、
+// 外部ファイルからのimportだとpandaのASTには含まれない。
+// TODO computed valueはno-dynamic-stylingのルールで弾きたい
 export enum RESULT {
   OK = "ok",
   NG = "ng",
@@ -12,8 +14,8 @@ type P = {
   style: HeadingStyle;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
-// valueはno-dynamic-stylingのルールで引っかかる
-const padding = "24px";
+// valueに変数を渡すとno-dynamic-stylingのルールで引っかかる
+// const padding = "24px";
 const heading = cva({
   base: {
     fontSize: "3xl",
