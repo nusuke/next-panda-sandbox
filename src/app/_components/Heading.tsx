@@ -1,4 +1,10 @@
 import { css, cva, RecipeVariantProps } from "../../../styled-system/css";
+// import { RESULT } from "./const";
+// computed valueはno-dynamic-stylingのルールで引っかかる
+export enum RESULT {
+  OK = "ok",
+  NG = "ng",
+}
 
 type P = {
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -6,6 +12,8 @@ type P = {
   style: HeadingStyle;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
+// valueはno-dynamic-stylingのルールで引っかかる
+const padding = "24px";
 const heading = cva({
   base: {
     fontSize: "3xl",
@@ -14,10 +22,14 @@ const heading = cva({
   variants: {
     color: {
       primary: { color: "primary", backgroundColor: "secondary" },
-      secondary: { color: "white", backgroundColor: "#df4d20" },
+      secondary: { color: "white", backgroundColor: "orange" },
     },
-    hoge: {
-      fuga: { fontSize: "4xl", border: "1px solid red", padding: "[24px]" },
+    result: {
+      [RESULT.OK]: {
+        fontSize: "2xl",
+        border: "1px solid red",
+        padding: "24px",
+      },
     },
   },
 });

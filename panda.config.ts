@@ -18,10 +18,11 @@ export default defineConfig({
           primary: { value: "#0FEE0F" },
           secondary: { value: "#EE0F0F" },
           red: {
-            value: "#FF0000",
-            hoge: { value: "#00ff00" },
-            fuga: { value: "#dd0000" },
+            value: "#ee0000",
+            strong: { value: "#ff0000" },
+            week: { value: "#dd0000" },
           },
+          orange: { value: "#df4d20" },
         },
         fonts: {
           body: { value: "system-ui, sans-serif" },

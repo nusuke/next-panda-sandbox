@@ -1,4 +1,5 @@
 import { css } from "../../styled-system/css";
+import { RESULT } from "./_components/const";
 import { Heading } from "./_components/Heading";
 
 export default function Home() {
@@ -16,12 +17,8 @@ export default function Home() {
       <Heading
         as="h1"
         text="Hello, world!"
-        style={{ color: "secondary", hoge: "fuga" }}
+        style={{ color: "secondary", result: RESULT.OK }}
       />
-      <div className={css({ marginBlock: "m" })}>hoge</div>
-      <div className={css({ color: "red.hoge" })}>redhoge</div>
-      <div className={css({ color: "red.200" })}>red2</div>
-      <div className={css({ color: "red.100" })}>red1</div>
     </main>
   );
 }
