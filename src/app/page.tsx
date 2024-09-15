@@ -1,4 +1,5 @@
 import { css } from "../../styled-system/css";
+import { Button } from "./_components/Button";
 import { RESULT } from "./_components/const";
 import { Heading } from "./_components/Heading";
 
@@ -19,6 +20,10 @@ export default function Home() {
         text="Hello, world!"
         style={{ color: "secondary", result: RESULT.OK }}
       />
+
+      <Button>
+        <>test</>
+      </Button>
     </main>
   );
 }

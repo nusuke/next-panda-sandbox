@@ -3,3 +3,5 @@ export enum RESULT {
   OK = "ok",
   NG = "ng",
 }
+
+export const computedPaddingValue = "padding";
